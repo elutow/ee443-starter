@@ -1,0 +1,8 @@
+# CCS/Eclipse ignores
+# Auto-generated config
+/.launches/
+# Our target configs are auto-generated right now
+/targetConfigs/
+# Build outputs
+/Debug/
+/Release/
