@@ -1,5 +1,5 @@
 // Welch, Wright, & Morrow, 
-// Real-time Digital Signal Processing, 2011
+// Real-time Digital Signal Processing, 2017
  
 ///////////////////////////////////////////////////////////////////////
 // Filename: main.c

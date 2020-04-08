@@ -2,20 +2,30 @@
 
 ## Requirements
 
-* Code Composer Studio v10
+* Code Composer Studio v10 (see instructions below)
 * OMAP-L138 LCDK
 * XDS100v2 JTAG Emulator
 
-## Setup
+## Setup CCS
 
-First, install C6000 Compiler Tools v7 (for legacy COFF format support):
+Installation instructions:
 
-1. In CCS menubar, go to Help -> Install Code Generation Compiler Tools...
-2. In the "type filter text" textbox, type in `C6000 Compiler Tools`
-3. In the listing below, check the box for "C6000 Compiler Tools" corresponding to "7.4.24" (or the latest 7.4.x version)
-4. Click "Finish", and let the compiler install.
+1. Uninstall any older CCS versions to prevent potential confusion
+2. Launch the installer, and proceed through the welcome screens. Make sure to select "Custom Installation"
+3. In Select Components, select "OMAP-L1x DSP + ARM9(R) Processor"
+4. In Install debug probes, ensure "Spectrum Digital Debug Probes and Boards" is selected.
+5. Proceed through the remaining dialogs and complete CCS installation
 
-Second, add this project to your CCS workspace:
+**If you did NOT select OMAP-L1x support during installation:** (NOTE: instructions currently untested):
+
+1. In CCS menubar, go to Help -> Install New Software...
+2. Under the "Work with:" dropdown, select "Code Composer Studio v10 Updates"
+3. In the components list below, select the following:
+    * OMAPL Device Support
+    * C6000 Compiler Tools (version 8.3.6 or newer)
+4. Select "Finish"
+
+## Setup Project
 
 1. In a new terminal, go into your CCS workspace directory
 2. `git clone git@github.com:elutow/ee443.git`

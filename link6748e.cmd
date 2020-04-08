@@ -1,7 +1,9 @@
-// link6748.cmd
-// linker command file for OMAP-L138 DSP
+// Welch, Wright, & Morrow,
+// Real-time Digital Signal Processing, 2017
 
--l rts6740.lib
+// linker command file for OMAP-L138 DSP using EABI ELF
+
+-l rts6740_elf.lib
 
 -stack           0x00000400      // stack
 -heap            0x00000400      // heap
@@ -17,6 +19,8 @@ MEMORY
 SECTIONS
 {
     "vectors"	>   VECTORS
+    .neardata   >   DSPRAM
+    .rodata     >   DSPRAM
     .bss        >   DSPRAM
     .cinit      >   DSPRAM
     .cio        >   DSPRAM
@@ -26,6 +30,7 @@ SECTIONS
     .text       >   DSPRAM
     .switch     >   DSPRAM
     .far        >   DSPRAM
+    .fardata    >   DSPRAM
 	"SHARED_SRAM" >   SHAREDRAM
 	"CE0"  >   SDRAM
 }

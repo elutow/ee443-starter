@@ -1,5 +1,5 @@
 * Welch, Wright, & Morrow, 
-* Real-time Digital Signal Processing, 2011
+* Real-time Digital Signal Processing, 2017
 
 *//////////////////////////////////////////////////////////////////////
 */ Filename: vectors.asm
@@ -8,16 +8,22 @@
 */
 *//////////////////////////////////////////////////////////////////////
 
-    .ref    _c_int00
+; EABI ELF standard does not add leading underscore to C identifiers
+
+	.if __TI_EABI__
+    .ref    Codec_ISR
+	.else ; COFF ABI
     .ref    _Codec_ISR        
-  
+	.endif
+    .ref    _c_int00
+
     .sect   "vectors"
 	.nocmp	; do not allow 16 bit instructions to be used in the vector table
 			; so everything remains aligned
 RESET_RST:
     MVKL .S2 _c_int00, B0
     MVKH .S2 _c_int00, B0
-    B    .S2 B0
+   B    .S2 B0
 	NOP
 	NOP
 	NOP
@@ -111,7 +117,11 @@ INT11:  b INT11	; stall here if interrupt occurs
 	NOP
 	NOP
 	NOP
-INT12:  b _Codec_ISR
+	.if __TI_EABI__
+INT12:  b Codec_ISR
+	.else ; COFF ABI
+INT12:  b _Codec_ISR;
+	.endif
 	NOP
 	NOP
 	NOP

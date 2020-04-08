@@ -5,10 +5,10 @@
 	<deviceVariant value="TMS320C67XX.OMAPL138.LCDKOMAPL138"/>
 	<deviceFamily value="C6000"/>
 	<deviceEndianness value="little"/>
-	<codegenToolVersion value="7.4.24"/>
-	<isElfFormat value="false"/>
+	<codegenToolVersion value="8.3.6"/>
+	<isElfFormat value="true"/>
 	<connection value="common/targetdb/connections/TIXDS100v2_Connection.xml"/>
-	<linkerCommandFile value="link6748.cmd"/>
+	<linkerCommandFile value="link6748e.cmd"/>
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.common.project.core.emptyProjectTemplate"/>

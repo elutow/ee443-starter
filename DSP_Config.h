@@ -1,5 +1,5 @@
 // Welch, Wright, & Morrow, 
-// Real-time Digital Signal Processing, 2012
+// Real-time Digital Signal Processing, 2017
  
 ///////////////////////////////////////////////////////////////////////
 // Filename: DSP_Config.h
