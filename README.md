@@ -1,5 +1,9 @@
 # EE 443 Homework and Labs
 
+Starter code for EE 443 HW and Labs
+
+This branch uses the legacy COFF executable format with TI compiler v7. *It is recommended to use the `starter` branch instead.*
+
 ## Requirements
 
 * Code Composer Studio v10
@@ -18,7 +22,7 @@ First, install C6000 Compiler Tools v7 (for legacy COFF format support):
 Second, add this project to your CCS workspace:
 
 1. In a new terminal, go into your CCS workspace directory
-2. `git clone git@github.com:elutow/ee443.git`
+2. Clone this repo
 3. In CCS menubar, go to Project -> Import CCS Projects...
-4. Select "Select search-directory", and click "Browse..." to the path of the `ee443` repository you just cloned
+4. Select "Select search-directory", and click "Browse..." to the path where you cloned this repo
 5. Click "Finish"
